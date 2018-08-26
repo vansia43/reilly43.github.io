@@ -14,16 +14,6 @@ font-family: 'Helvetica', 'Arial', sans-serif;
 padding-right:11px;
 text-align: center;
 }
-.ppic {
-  display: block;
-  vertical-align: middle;
-  width: 100%;
-  -webkit-transition: opacity 0.3s ease-out;
-  -o-transition: opacity 0.3s ease-out;
-  transition: opacity 0.3s ease-out;
-  border-radius: 100%;
-}
-
 img {
   display: block;
   vertical-align: middle;
@@ -51,45 +41,38 @@ a {
 .container{
   display: grid;
   font-family: 'Helvetica', 'Arial', sans-serif;
-  grid-template-columns: 20% 10% 40% 10% 20%;
-  grid-template-rows: 20% 20% 20% 20% 20%;
+  grid-template-columns: 1fr 3fr 2fr;
+  grid-auto-rows: 100px;
    justify-items: center;
 }
 
 .headername{
-  grid-column:2/4;
+  grid-column:2/3;
   grid-row:1;
   grid-row-start: 1;
   grid-row-end: 2;
    justify-items: center;
 }
 .links{
-  grid-column:2/4;
+  grid-column:2/3;
   grid-row-start: 2;
   grid-row-end: 3;
 }
 .main{
-  grid-column:2/4;
+  grid-column:2/3;
   grid-row-start: 3;
   grid-row-end: 4;
 }
 .profilepic{
-  grid-column:4/5;
-  grid-row-start: 2;
-  grid-row-end: 3;
+  grid-column:3/4;
+  grid-row-start: 3;
+  grid-row-end: 4;
 }
 .gallery{
-  grid-column:2/4;
+  grid-column:2/3;
   grid-row-start: 6;
   grid-row-end: 7;
 }
-
-.contact{
-  grid-column:2/4;
-  grid-row-start: 8;
-  grid-row-end: 9;
-}
-
 nav ul {
   display: flex;
   justify-content: space-between;
@@ -139,12 +122,14 @@ ul {
     <section class="links">
       <nav>
       <ul >
-
+        <li>
+          <a href="#" title="About">About</a>
+        </li>
         <li>
           <a href="https://daniellereilly.com/daniellereillyresume(3).pdf" title="Resume">Resume</a>
         </li>
         <li>
-          <!-- <a href="https://daniellereilly.com/contact.html" title="Contact">Contact</a> -->
+          <a href="https://daniellereilly.com/contact.html" title="Contact">Contact</a>
         </li>
       </ul>
       <nav>
@@ -162,78 +147,68 @@ ul {
   </div>
   </ul>
   </section>
-  <!-- <section class="profilepic">
-    <img class="ppic" src="https://lh3.googleusercontent.com/y9gkKAbMjKmhAWiv5WSs6lLeD1mhB1WlqyX6kND5KWaLbyOjLhlE6EL_SQCXk2-USUSUjDwL9oCtxwNHTQEAkLNdyRVvJwe8la2en9s9V4LrBR7FhaBocjDWhmUXlaqyUgKyoglYLG41gbYgk4tNTQLzsJI-07hhZScdvNx68gSxAI-Ig9v7uYMAvknqrYtYa6Sv2jjc8R3-kJhbnVR3lqehxzqAwjwWz9947K2yVISrITbTuxNoQ9NenHmxOL8hwC4NmE9rqhhIkaIwMHoFhqXeY2jNrnSJ9TgOnVS0K1w2pQMyXauGuUuzhTmgXg0rPhHvSwhKfSgIIKl_FhdVTx5qr6Uswu0V0zKQRVZUN0MLbFx7KpHn87Rx9sqB1UYLSM1pceddgaK-SzkMOR70tS8kLFg4u0jzbZgLeP6uSRGXVMpQORL2C0a1t6UwvxxGoAVGO5knb9zz1YXllEDnYKpfibpNjNtPfxZTXwNrE8wP4jpQm5MfqAe-GxB4-sEQKrX77n3hQ8fGsX2lRpCko1viyJwjZGAOe9759VfWj-D2W1R6WZ4MLc8DOzeAce-sYgy9=s128-no" class="profile-img">
-  </section> -->
+  <section class="profilepic">
+    <img src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/1930829_28860116191_8581_n.jpg?_nc_cat=0&oh=2b887f0e18ad9f98ad1c459037f249c8&oe=5C10020B" class="profile-img">
+  </section>
 
   <section class="gallery">
-    <h1 class="statement">My Work</h1>
-
     <ul>
-
       <li class="item">
         <div class="info">
-
           <a href="#" title="Project Title">
-            <img src="IMG_0609.JPG">
+            <img src="https://source.unsplash.com/hnEtVqVlVZU">
           </a>
-          <!-- <h3>Project Title</h3> -->
-          <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
+          <h3>Project Title</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
       </li>
       <li class="item">
         <div class="info">
           <a href="#" title="Project Title">
-            <img src="weddingprogramdrrv.png">
+            <img src="https://source.unsplash.com/RPzWI0rolS8">
           </a>
-          <!-- <h3>Project Title</h3> -->
-          <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
+          <h3>Project Title</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
       </li>
       <li class="item">
         <div class="info">
           <a href="#" title="Project Title">
-            <img src="website1.heic">
+            <img src="https://source.unsplash.com/i1S4n4yQUKM">
           </a>
-          <!-- <h3>Project Title</h3> -->
-          <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
+          <h3>Project Title</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
       </li>
       <li class="item">
         <div class="info">
           <a href="#" title="Project Title">
-            <img src="IMG_0334.jpg">
+            <img src="https://source.unsplash.com/QgHvLSuIcLs">
           </a>
-          <!-- <h3>Project Title</h3> -->
-          <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
+          <h3>Project Title</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
       </li>
       <li class="item">
         <div class="info">
           <a href="#" title="Project Title">
-            <img src="IMG_0331.png">
+            <img src="https://source.unsplash.com/s74-lwoDFOw">
           </a>
-          <!-- <h3>Project Title</h3> -->
-          <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
+          <h3>Project Title</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
       </li>
       <li class="item">
         <div class="info">
           <a href="#" title="Project Title">
-            <img src="IMG_0338.jpg">
+            <img src="https://source.unsplash.com/KTTG3Jcrfz4">
           </a>
-          <!-- <h3>Project Title</h3> -->
-          <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
+          <h3>Project Title</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
       </li>
     </ul>
   </section>
-  <!-- <section class="contact">
-    <h3>Contact</h3>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-  </section> -->
 
   <!-- <footer>
     <p>
