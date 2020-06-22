@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html>
+<title> Danielle Vansia </title>
+
+<style type="text/css">
+  .gallery {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: repeat(8, 5vw);
+      grid-gap: 15px;
+  }
+  .gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.gallery__item--1 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 6;
+
+  /** Alternative Syntax **/
+  /* grid-column: 1 / span 2;  */
+  /* grid-row: 1 / span 2; */
+}
+
+.gallery__item--2 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 6;
+
+  /** Alternative Syntax **/
+  /* grid-column: 3 / span 2;  */
+  /* grid-row: 1 / span 2; */
+}
+
+.gallery__item--3 {
+  grid-column-start: 1;
+  grid-column-end: 9;
+  grid-row-start: 6;
+  grid-row-end: 10;
+
+  /** Alternative Syntax **/
+  /* grid-column: 5 / span 4;
+  grid-row: 1 / span 5; */
+}
+
+.gallery__item--4 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 6;
+  grid-row-end: 10;
+
+  /** Alternative Syntax **/
+  /* grid-column: 1 / span 4;  */
+  /* grid-row: 3 / span 3; */
+}
+
+.gallery__item--5 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 10;
+  grid-row-end: 14;
+
+  /** Alternative Syntax **/
+  /* grid-column: 1 / span 4; */
+  /* grid-row: 6 / span 3; */
+}
+
+.gallery__item--6 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 10;
+  grid-row-end: 14;
+
+  /** Alternative Syntax **/
+  /* grid-column: 5 / span 4; */
+  /* grid-row: 6 / span 3; */
+}
+
+  .headername{
+    display: grid;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    grid-column:2/4;
+    grid-row:1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-items: center;
+  }
+  .links{
+    display: grid;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    grid-gap: 15px;
+    grid-column:2/4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    justify-items: center;
+
+  }
+  .resume{
+    font-weight: bold;
+    font-size: x-large;
+    padding-right: 1.8em;
+
+  }
+  a {
+    color:#000000;
+    text-decoration: none;
+    -webkit-transition: color 0.3s ease-out;
+    -o-transition: color 0.3s ease-out;
+    transition: color 0.3s ease-out;
+  }
+   nav ul {
+    display: grid;
+    justify-content: space-between;
+    list-style: none;
+  }
+
+  /* nav a{
+    padding-right: 50px;
+  } */
+  .fname{
+  font-size: 3em;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  padding-right:11px;
+  text-align: center;
+  }
+  .lname{
+    font-size: 3em;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    color: #63bf7e;
+    text-align: center;
+  }
+  .container{
+    display: grid;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    /* grid-template-columns: 25% 10% 40% 10% 15%;
+    grid-template-rows: 4% 1% 20% 2% 28%; */
+  }
+  .statement{
+    display: grid;
+
+    color: #63bf7e;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    justify-items: center;
+
+  }
+  .text{
+    display: grid;
+
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    justify-items: center;
+    padding-right:2em;
+    padding-left:2em;
+
+
+
+  }
+</style>
+
+<div class="headername">
+<h2> <span class="fname">Danielle</span> <span class="lname">Vansia</span></h2>
+</div>
+<div class="links">
+
+  <span>  <a class="resume" target="_blank" href="https://daniellevansia.com/daniellevansiaresume.pdf" title="Resume">Resume</a>
+    <a class="resume"  href="https://daniellevansia.com/blog" title="Blog">Blog</a>
+    <a class="resume" href="https://daniellevansia.com/art" title="Art">Art</a></span>
+</div>
+
+<h1 class="statement">ARTIST'S STATEMENT</h1>
+    <p class="text"> I find beauty in natural symmetry. I paint with watercolor to emphasize nature's beauty through light. I then use pen and ink to define the symmetry and the distinct lines of an object. This style allows me to appreciate both the randomness and order found in the world.</p>
+
+<div class="gallery">
+                <figure class="gallery__item gallery__item--1">
+                    <img src="IMG_0609.JPG" alt="Gallery image 1" class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item--2">
+                    <img src="website1.heic" alt="Gallery image 2" class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item--3">
+                    <img src="IMG_2677.jpg" alt="Gallery image 3" class="gallery__img">
+                </figure>
+
+                <figure class="gallery__item gallery__item--5">
+                    <img src="IMG_0331.png" alt="Gallery image 5" class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item--6">
+                    <img src="IMG_0351.HEIC" alt="Gallery image 6" class="gallery__img">
+                </figure>
+            </div>
+</html>

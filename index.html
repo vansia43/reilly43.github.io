@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-<div class="container">
   <title> Danielle Vansia </title>
     <style type="text/css">
       *, *:before, *:after {
@@ -33,11 +32,15 @@ img {
   transition: opacity 0.3s ease-out;
 }
 a {
-  color:#000000;
+  color: #000000;
+  font-weight:700;
   text-decoration: none;
   -webkit-transition: color 0.3s ease-out;
   -o-transition: color 0.3s ease-out;
   transition: color 0.3s ease-out;
+}
+a:hover{
+  color: #63bf7e
 }
 .lname{
   font-size: 3em;
@@ -47,10 +50,19 @@ a {
 }
 .statement{
   color: #63bf7e;
+  font-size: 2em;
+}
+.subtitles{
+  color: #63bf7e;
+  font-size: 1.4em
 }
 .resume{
+  color: #000000;
+  text-decoration: none;
   font-weight: bold;
   font-size: x-large;
+  padding-right: 1.8em;
+
 }
 .container{
   display: grid;
@@ -61,20 +73,27 @@ a {
 }
 
 .headername{
+  display: grid;
+  font-family: 'Helvetica', 'Arial', sans-serif;
   grid-column:2/4;
   grid-row:1;
   grid-row-start: 1;
   grid-row-end: 2;
-   justify-items: center;
+  justify-items: center;
 }
 .links{
+  display: grid;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  grid-gap: 15px;
   grid-column:2/4;
   grid-row-start: 2;
   grid-row-end: 3;
+  justify-items: center;
+
 }
 .main{
   grid-column:2/4;
-  grid-row-start: 3;
+  grid-row-start: 1;
   grid-row-end: 4;
 }
 .profilepic{
@@ -134,76 +153,126 @@ ul {
   -ms-flex-preferred-size: calc(50% - 1em);
   flex-basis: calc(50% - 1em);
 }
+
+/* Make the accordian */
+
+.accordion {
+  background-color: #f9fffb;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-weight: bold;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #eaf5ee;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.accordion:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
     </style>
 
 
-      <div class="headername">
-      <h2> <span class="fname">Danielle</span> <span class="lname">Vansia</span></h2>
+    <div class="headername">
+    <h2> <span class="fname">Danielle</span> <span class="lname">Vansia</span></h2>
     </div>
-    <section class="links">
-      <nav>
-      <ul >
+    <div class="links">
 
-        <li>
-          <a class="resume" target="_blank" href="https://daniellevansia.com/daniellevansiaresume.pdf" title="Resume">Resume</a>
-        </li>
-        <li>
-          <a class="resume" target="_blank" href="https://daniellevansia.com/blog" title="Blog">Blog</a>
-        </li>
-      </ul>
-      <nav>
-    </section>
+      <span>  <a class="resume" target="_blank" href="https://daniellevansia.com/daniellevansiaresume.pdf" title="Resume">Resume</a>
+        <a class="resume"  href="https://daniellevansia.com/blog" title="Blog">Blog</a>
+        <a class="resume" href="https://daniellevansia.com/art" title="Art">Art</a></span>
+    </div>
+
+    <div class="container">
+
 
   <section class="main">
-    <ul>
     <div>
     <h1 class="statement">PROFESSIONAL STATEMENT</h1>
-    <p>I am both a technical and creative individual. I thrive in both collaborative and individualized settings. I am results-driven and have a passion for obtaining new knowledge. I am currently a Technical Writer at Cerner Corporation where I spend my time creating concise and understandable content for our solutions' end-users.</p>
+    <p>I am both a technical and creative individual, who thrives in both collaborative and individualized settings. I am results-driven and have a passion for obtaining new knowledge. I am currently a Technical Writer at Cerner Corporation where I spend my time creating concise and understandable content for our solutions' end-users. I also contribute to open-source projects on the side and enjoy being part of a collaborative community.</p>
     </div>
     <div>
-    <br>
-    </br>
-          <H3 class="statement">Google Season of Docs 2019</h3>
-      <p>I was chosen to be one of the writers for the first Google Season of Docs project. I am currently keeping track of my progress on my <a class="statement" href="https://daniellevansia.com/blog" target="_blank" rel="noopener">Blog</a>. Below is my proposal and examples of work done for my application.</p>
-      
-      <b>Kolibri Content Workflows Proposal</b>
-      
-      <p>As a way of gaining more experience in the field of technical writing, I am excited to create a proposal for Google's first Season of Docs program. I chose Learning Equality's Kolibri application as the organization that I am applying to because of my passion for education and previous work experience. As part of the application process, I created a proposal outlining potential content workflow tutorials. I also created a sample video to demonstrate the kind of tutorial I could create for this project. Both deliverables are linked below.</p>
-      <p><a class="statement" target="_blank" href="http://daniellevansia.com/Kolibri_Project_Proposal.pdf">Kolibri Content Workflows Project Proposal </a></p>
-      <p><a class="statement" target="_blank" href="https://www.youtube.com/watch?v=DkMP_VdGslU&feature=youtu.be">Sample Video Tutorial </a></p>
-      <br>
-      </br>
-          <H3 class="statement">Examples of Previous Professional Work</h3>
+      <H3 class="subtitles">Getting Things GNOME! User Help</h3>
+          <p>Getting Things GNOME! (GTG) is a task management application for Linux environments. The application went through a hiatus and was revived in 2020. I worked on overhauling the old user manual
+            and made updates for the newest release. My work is documented on my <a href="https://github.com/vansia43" target="_blank">GitHub</a> account.</p>
+      <H3 class="subtitles">Google Season of Docs 2019</h3>
+        <p>I was chosen to be one of the writers for the first Google Season of Docs project. I kept track of my progress on my <a href="https://daniellevansia.com/blog" target="_blank" rel="noopener">Blog</a>. Below is my proposal as well as my final project report.</p>
+        <p><a target="_blank" href="https://docs.google.com/document/d/1lBC3nS23nRP6qawphMbgs2_t9BsPS2NUSjK4zwzd7_8/edit">Final Project Report </a></p>
+        <p><a target="_blank" href="http://daniellevansia.com/Kolibri_Project_Proposal.pdf">Kolibri Content Workflows Project Proposal </a></p>
 
- 
-  <b >The College of New Jersey (TCNJ)</b>
+
+
+          <H3 class="subtitles">Examples of Previous Professional Work</h3>
+<div class="content">
+  <button class="accordion">The College of New Jersey (TCNJ)</button>
+<div class="panel">
 
   <p>Recently, I had the opportunity to provide remote training and database solutions for TCNJ's Office of Graduate and Advancing Education. I had the opportunity to redesign a database I had created when previously working there. This student database allows a user to input student information as well as toggle through applicants. The database was used to track applicants in a special program and for storing admissions information. I used MS Access to develop the database. This allowed the office to easily pull reports and keep track of enrollment data.</p>
-  <p>Technical Writing Sample #1: <a class="statement" href="https://daniellevansia.com/Pre-College-Programs-Database-User-Guide.pdf" target="_blank" rel="noopener">Pre-College Programs Database User Guide</a></p>
+  <p>Technical Writing Sample #1: <a href="https://daniellevansia.com/Pre-College-Programs-Database-User-Guide.pdf" target="_blank" rel="noopener">Pre-College Programs Database User Guide</a></p>
     <br>
     </br>
    <img src="finalpcacapture.gif">
   <br>
   </br>
-  </ul>
-      
-       <b >West Chester University (WCU)</b>
+</div>
+
+<button class="accordion">West Chester University (WCU)</button>
+<div class="panel">
 
 <p>While at WCU, I provided technical support for WCU's assessment software system, Tk20 by Watermark. I also created a number of training videos to educate end-users on how to use the assessment software system. See below for some video examples. I was able to use these videos during in-person training classes as an additional resource.</p>
-<p>Technical Writing Sample #1: <a class="statement" href="https://daniellevansia.com/WCU_TK20_StudentGuide.pdf" target="_blank" rel="noopener">Assessment Software Student User Guide</a>
-<p>Tutorial Video Sample #1: <a class="statement" href="https://youtu.be/JX5LNSIHSro" target="_blank" rel="noopener">Tutorial for Student Assignment Submission</a></p>
-<p>Tutorial Video Sample #2: <a class="statement" href="https://youtu.be/VnbkPu-Mefg" target="_blank" rel="noopener">Tutorial for Assessing Student Assignment</a></p>
-  <br>
-    </br>
-      <H3 class="statement">Academic Writing Samples</h3>
+<p>Technical Writing Sample #1: <a href="https://daniellevansia.com/WCU_TK20_StudentGuide.pdf" target="_blank" rel="noopener">Assessment Software Student User Guide</a>
+<p>Tutorial Video Sample #1: <a href="https://youtu.be/JX5LNSIHSro" target="_blank" rel="noopener">Tutorial for Student Assignment Submission</a></p>
+<p>Tutorial Video Sample #2: <a href="https://youtu.be/VnbkPu-Mefg" target="_blank" rel="noopener">Tutorial for Assessing Student Assignment</a></p>
+</div>
+
+<button class="accordion">Academic Writing Samples</button>
+<div class="panel">
 
   <p>Click the links below to view some academic writing samples. These samples were written while I pursued my MA in English.</p>
 
-<p>Academic Writing Sample #1 - <a class="statement" target="_blank" href="https://daniellevansia.com/Reilly_STEMGenderEd.pdf">Research Paper</a></p>
+<p>Academic Writing Sample #1 - <a target="_blank" href="https://daniellevansia.com/Reilly_STEMGenderEd.pdf">Research Paper</a></p>
 
-<p>Academic Writing Sample #2 - <a class="statement" target="_blank" href="https://daniellevansia.com/Relly_TisBookReviewSample.pdf">Book Review</a></p>
-<br>
-</br>
-  </section>
+<p>Academic Writing Sample #2 - <a target="_blank" href="https://daniellevansia.com/Relly_TisBookReviewSample.pdf">Book Review</a></p>
 </div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+</script>
 </html>
