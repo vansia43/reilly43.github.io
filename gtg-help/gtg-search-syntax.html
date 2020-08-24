@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>GTG Search Syntax</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" src="highlight.pack.js"></script><script>
+document.addEventListener('DOMContentLoaded', function() {
+  var matches = document.querySelectorAll('code.syntax')
+  for (var i = 0; i < matches.length; i++) {
+    hljs.highlightBlock(matches[i]);
+  }
+}, false);</script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body><main><div class="page">
+<header><div class="inner pagewide"><div class="trails" role="navigation"><div class="trail">
+<a class="trail" href="index.html" title="Getting Things GNOME! Help">Getting Things GNOME! Help</a> › <a class="trail" href="index.html#gtg-search" title="Searching For Tasks">Searching For Tasks</a> » </div></div></div></header><article><div class="hgroup pagewide"><h1 class="title"><span class="title"><span class="app">GTG</span> Search Syntax</span></h1></div>
+<div class="region">
+<div class="contents pagewide">
+<p class="p">When performing a search request, you can also use special keywords to help refine your results. The table below describes this syntax. This functionality allows you to more efficiently view tasks based on specific criteria and prioritize tasks that are immediately due.</p>
+<div class="table ui-expander">
+<div class="yelp-data yelp-data-ui-expander" dir="ltr" data-yelp-expanded="true"></div>
+<div class="inner">
+<div class="title title-table"><h2><span class="title"><span class="app">GTG</span> Search Keywords</span></h2></div>
+<div class="region"><table class="table" style="border-top-style: solid;border-bottom-style: solid;">
+<thead><tr>
+<td><p class="p"><span class="em-bold em">Search Query</span></p></td>
+<td><p class="p"><span class="em-bold em">Search Result</span></p></td>
+</tr></thead>
+<tbody>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="code">word</span></p></td>
+<td style="border-top-style: solid;"><p class="p">Tasks that contain a single word.</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="code">"text"</span></p></td>
+<td style="border-top-style: solid;"><p class="p">Tasks that contain everything inside of the quotes. You can include multiple words, special characters, and spaces in this search.
+</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="code">@tag</span></p></td>
+<td style="border-top-style: solid;"><p class="p">Tasks with this tag.</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="code">!notag</span></p></td>
+<td style="border-top-style: solid;"><p class="p">Tasks without tags.</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="code">!before [date]</span></p></td>
+<td style="border-top-style: solid;">
+<p class="p">Tasks that need to be completed before the input date.</p>
+<p class="p">See the note below for the <span class="code">[date]</span> element's format.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="code">!after [date]</span></p></td>
+<td style="border-top-style: solid;">
+<p class="p">Tasks that you can wait to complete until after the input date. These tasks either have a start date that is after the input date or do not have a start date set and are due after the input date.</p>
+<p class="p">See the note below for the <span class="code">[date]</span> element's format.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="code">!today</span></p></td>
+<td style="border-top-style: solid;"><p class="p">Tasks that are due today.</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="code">!tomorrow</span></p></td>
+<td style="border-top-style: solid;"><p class="p">Tasks that are due tomorrow.</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="code">!nodate</span></p></td>
+<td style="border-top-style: solid;"><p class="p">Tasks without a set due date.</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="code">!now</span></p></td>
+<td style="border-top-style: solid;"><p class="p">Tasks with due date defined as "now."</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="code">!soon</span></p></td>
+<td style="border-top-style: solid;"><p class="p">Tasks with due date defined as "soon."</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="code">!someday</span></p></td>
+<td style="border-top-style: solid;"><p class="p">Tasks with due date defined as "someday."</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="code">!not [query]</span></p></td>
+<td style="border-top-style: solid;"><p class="p">Tasks that do not include the next part of the query.</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="code">[query] !or [query]</span></p></td>
+<td style="border-top-style: solid;"><p class="p">Tasks with one of the specified elements in the query.</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="note note-tip" title="Tip">
+<svg width="24" height="24" version="1.1">
+ <path class="yelp-svg-fill" d="m12 2c-3.8541 0-7 3.1459-7 7 0 1.823 0.4945 3.139 1.1641 4.133 0.6695 0.994 1.4328 1.671 2.039 2.471 0.0882 0.116 0.1749 0.656 0.2071 1.32 0.016 0.332 0.0133 0.68 0.1894 1.119 0.0881 0.22 0.2439 0.478 0.5059 0.672 0.2619 0.194 0.6028 0.285 0.8945 0.285h4c0.583 0 1.204-0.478 1.402-0.908 0.199-0.43 0.217-0.793 0.244-1.137 0.056-0.688 0.138-1.319 0.211-1.441 0.549-0.916 1.304-2.009 1.94-3.114 0.636-1.104 1.203-2.199 1.203-3.4 0-3.8541-3.146-7-7-7zm0 2c2.773 0 5 2.2267 5 5 0 0.456-0.359 1.401-0.936 2.402-0.111 0.195-0.246 0.399-0.369 0.598h-7.8825c-0.4871-0.728-0.8125-1.519-0.8125-3 0-2.7733 2.2267-5 5-5z" style="block-progression:tb;color-rendering:auto;color:#000000;image-rendering:auto;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-transform:none;white-space:normal"></path>
+ <path class="yelp-svg-fill" d="m9 20a0.5 0.5 0 0 0-0.5 0.5 0.5 0.5 0 0 0 0.5 0.5h6a0.5 0.5 0 0 0 0.5-0.5 0.5 0.5 0 0 0-0.5-0.5h-6zm0 2a0.5 0.5 0 0 0-0.5 0.5 0.5 0.5 0 0 0 0.5 0.5h6a0.5 0.5 0 0 0 0.5-0.5 0.5 0.5 0 0 0-0.5-0.5h-6z"></path>
+</svg><div class="inner">
+<div class="title title-note"><h2><span class="title">Date Format</span></h2></div>
+<div class="region"><div class="contents"><p class="p"><span class="code">[date]</span> can be formatted in a number of ways using <span class="app">GTG's</span> natural date parsing syntax. Dates can be literal (for example, "2020-04-20") or "fuzzy" (for example, "someday"). See <span class="link"><a href="gtg-date-parsing.html" title="Using the Date and Keyword Parsing Syntax">Using the Date and Keyword Parsing Syntax</a></span> for details.</p></div></div>
+</div>
+</div>
+<p class="p">The search feature behaves like it adds an implicit, logical <span class="em">AND</span> between each element (unless the <span class="code">!or</span> operator is used). The results include tasks that match all elements of the query.</p>
+</div>
+<section id="searchexamples"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title"><span class="title">Search Query Examples</span></h2></div>
+<div class="region"><div class="contents pagewide"><div class="table ui-expander">
+<div class="yelp-data yelp-data-ui-expander" dir="ltr" data-yelp-expanded="true"></div>
+<div class="inner">
+<div class="title title-table"><h3><span class="title">Examples</span></h3></div>
+<div class="region"><table class="table" style="border-top-style: solid;border-bottom-style: solid;">
+<thead><tr>
+<td><p class="p"><span class="em-bold em">Search Input</span></p></td>
+<td><p class="p"><span class="em-bold em">Search Result</span></p></td>
+</tr></thead>
+<tbody>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="em-bold em"><span class="code">!tomorrow !or !today</span></span></p></td>
+<td style="border-top-style: solid;"><p class="p">Tasks that are due today or tomorrow.</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="em-bold em"><span class="code">@gtg @writing</span></span></p></td>
+<td style="border-top-style: solid;"><p class="p">Tasks with both the <span class="em-bold em"><span class="code">@gtg</span></span> and <span class="em-bold em"><span class="code">@writing</span></span> tags.</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="em-bold em"><span class="code">@gtg !before 2020-03-01</span></span></p></td>
+<td style="border-top-style: solid;"><p class="p">Tasks that are due before March 1, 2020, and have the <span class="em-bold em"><span class="code">@gtg</span></span> tag.</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="em-bold em"><span class="code">buy @errands</span></span></p></td>
+<td style="border-top-style: solid;"><p class="p">Tasks that include the word <span class="em-bold em"><span class="code">buy</span></span> in the task title or description and contain the <span class="em-bold em"><span class="code">@errands</span></span> tag.</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="em-bold em"><span class="code">!not buy @errands</span></span></p></td>
+<td style="border-top-style: solid;"><p class="p">Tasks that contain the <span class="em-bold em"><span class="code">@errands</span></span> tag but do not contain the word <span class="em-bold em"><span class="code">buy</span></span> in the task title or description.</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div></div></div>
+</div></section><section class="links" role="navigation"><div class="inner">
+<div class="hgroup pagewide"></div>
+<div class="contents pagewide">
+<div class="links guidelinks"><div class="inner">
+<div class="title"><h2><span class="title">More Information</span></h2></div>
+<div class="region"><ul><li class="links "><a href="index.html#gtg-search" title="Searching For Tasks">Searching For Tasks</a></li></ul></div>
+</div></div>
+<div class="links seealsolinks"><div class="inner">
+<div class="title"><h2><span class="title">See Also</span></h2></div>
+<div class="region"><ul><li class="links "><a href="gtg-search-intro.html" title="Searching for Tasks">Searching for Tasks</a></li></ul></div>
+</div></div>
+</div>
+</div></section>
+</div>
+<div class="clear"></div></article><footer><div class="inner pagewide"><footer class="about ui-expander" role="contentinfo"><div class="yelp-data yelp-data-ui-expander" data-yelp-expanded="false"></div>
+<div class="inner">
+<div class="hgroup"><h2><span class="title">About</span></h2></div>
+<div class="region"><div class="contents">
+<div class="copyrights">
+<div class="copyright">© 2012 Bertrand Rousseau</div>
+<div class="copyright">© 2020 Danielle Vansia</div>
+</div>
+<div class="credits">
+<div class="credits-authors">
+<div class="title"><span class="title">Written By</span></div>
+<ul class="credits"><li>Bertrand Rousseau</li></ul>
+</div>
+<div class="credits-editors">
+<div class="title"><span class="title">Edited By</span></div>
+<ul class="credits"><li>Danielle Vansia</li></ul>
+</div>
+<div class="credits-blank"></div>
+<div class="credits-blank"></div>
+</div>
+</div></div>
+</div></footer></div></footer>
+</div></main></body>
+</html>

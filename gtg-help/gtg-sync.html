@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Understand Sync Services</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" src="highlight.pack.js"></script><script>
+document.addEventListener('DOMContentLoaded', function() {
+  var matches = document.querySelectorAll('code.syntax')
+  for (var i = 0; i < matches.length; i++) {
+    hljs.highlightBlock(matches[i]);
+  }
+}, false);</script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body><main><div class="page">
+<header><div class="inner pagewide"></div></header><article><div class="hgroup pagewide"><h1 class="title"><span class="title">Understand Sync Services</span></h1></div>
+<div class="region">
+<div class="contents pagewide">
+<p class="p">Sync Services allow GTG to synchronize (meaning to have access or to import) tasks, notes or bugs from other sites or services like <span class="em">Launchpad</span>, <span class="em">Remember the Milk</span>, <span class="em">Tomboy</span>, <span class="em">GNote</span>...</p>
+<p class="p">There are different types of synchronization:</p>
+<div class="list"><div class="inner"><div class="region"><ul class="list">
+<li class="list"><p class="p"><span class="em">Read-only synchronization</span>: The primary goal is to track things, for example the bugs assigned to you on a bug tracking system. You cannot directly mark the task as resolved in GTG, but when you mark the associated bug as fixed on the bug tracking system, it will show up as such in GTG.  Read-only also means that if you open one of the imported tasks and change the title, description or tags, those changes are visible only to you and will be lost when the associated task is modified on the originating service. You are free to set any other field (start/due dates, subtasks...) as for those field your changes will be preserved. This is useful to add personal annotations to imported tasks.</p></li>
+<li class="list"><p class="p"><span class="em">Import synchronization</span>: This is similar to read-only synchronization but you are free to change any field you want. However, keep in mind that all the changes you make will be visible only on your computer. GTG will also make sure that no task is imported twice</p></li>
+<li class="list"><p class="p"><span class="em">Full synchronization</span>:</p></li>
+</ul></div></div></div>
+<p class="p">List of available sync services in GTG:</p>
+<p class="p"><span class="em-bold em">Evolution tasks</span></p>
+<p class="p">Allows you to synchronize your GTG tasks with Evolution tasks (full synchronization). <span class="em">This sync service is currently disabled because of a bug between PyGTK and python-evolution.</span></p>
+<p class="p"><span class="em-bold em">Identi.ca</span></p>
+<p class="p">Imports your Identi.ca messages into your GTG (import synchronization).</p>
+<p class="p"><span class="em-bold em">Tomboy</span></p>
+<p class="p">Synchronizes all or part of your Tomboy notes in GTG (full synchronization).</p>
+<p class="p"><span class="em-bold em">Gnote</span></p>
+<p class="p">Synchronizes all or part of your Gnote notes in GTG (full synchronization).</p>
+<p class="p"><span class="em-bold em">Launchpad</span></p>
+<p class="p">Allows you to import any Launchpad bugs assigned to you (or someone else) in your GTG (read-only synchronization).</p>
+<p class="p"><span class="em-bold em">Remember the Milk</span></p>
+<p class="p">Synchronize your tasks with the web service RememberTheMilk (full synchronization).</p>
+</div>
+<section class="links" role="navigation"><div class="inner">
+<div class="hgroup pagewide"></div>
+<div class="contents pagewide"><div class="links seealsolinks"><div class="inner">
+<div class="title"><h2><span class="title">See Also</span></h2></div>
+<div class="region"><ul><li class="links "><a href="gtg-add-sync.html" title="Enable/Disable Sync Service">Enable/Disable Sync Service</a></li></ul></div>
+</div></div></div>
+</div></section>
+</div>
+<div class="clear"></div></article><footer><div class="inner pagewide"><footer class="about ui-expander" role="contentinfo"><div class="yelp-data yelp-data-ui-expander" data-yelp-expanded="false"></div>
+<div class="inner">
+<div class="hgroup"><h2><span class="title">About</span></h2></div>
+<div class="region"><div class="contents">
+<div class="copyrights">
+<div class="copyright">© 2013 Radina Matic</div>
+<div class="copyright">©  </div>
+</div>
+<div class="credits">
+<div class="credits-authors">
+<div class="title"><span class="title">Written By</span></div>
+<ul class="credits"><li>Radina Matic</li></ul>
+</div>
+<div class="credits-editors">
+<div class="title"><span class="title">Edited By</span></div>
+<ul class="credits"><li></ul>
+</div>
+<div class="credits-blank"></div>
+<div class="credits-blank"></div>
+</div>
+<div class="license">
+<div class="title"><span class="title">Creative Commons</span></div>
+<div class="contents"><p class="p">This work is licensed under a <span class="link"><a href="http://creativecommons.org/licenses/by-sa/3.0/" title="http://creativecommons.org/licenses/by-sa/3.0/">Creative
+  Commons Attribution-ShareAlike 3.0 Unported License</a></span>.</p></div>
+</div>
+</div></div>
+</div></footer></div></footer>
+</div></main></body>
+</html>

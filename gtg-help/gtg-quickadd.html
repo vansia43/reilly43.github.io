@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Using the Quick Add Entry</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" src="highlight.pack.js"></script><script>
+document.addEventListener('DOMContentLoaded', function() {
+  var matches = document.querySelectorAll('code.syntax')
+  for (var i = 0; i < matches.length; i++) {
+    hljs.highlightBlock(matches[i]);
+  }
+}, false);</script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body><main><div class="page">
+<header><div class="inner pagewide"><div class="trails" role="navigation"><div class="trail">
+<a class="trail" href="index.html" title="Getting Things GNOME! Help">Getting Things GNOME! Help</a> › <a class="trail" href="index.html#gtg-task-management" title="Filtering and Organizing Tasks">Filtering and Organizing Tasks</a> » </div></div></div></header><article><div class="hgroup pagewide"><h1 class="title"><span class="title">Using the Quick Add Entry</span></h1></div>
+<div class="region">
+<div class="contents pagewide"><p class="p">The <span class="gui">Quick Add Entry</span> is the fastest way to create a new task. The <span class="gui">Quick Add Entry</span> field is located below the <span class="gui">Task Browser</span>.</p></div>
+<section id="quick-add-task"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title"><span class="title">Create a New Task Using the Quick Add Entry</span></h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="p">To add a task, type the task's title in the entry field and press <span class="key"><kbd>Enter</kbd></span>. Spaces are allowed when entering a title. The task is immediately available in the <span class="gui">Task Browser</span>. If a tag is selected in the <span class="gui">Sidebar</span> before you create the task in the <span class="gui">Quick Add Entry</span>, the tag will be applied to the task you created. </p>
+<div class="figure"><div class="inner">
+<a href="#" class="figure-zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"><svg width="10" height="10" class="figure-zoom-in"><rect x="0.5" y="0.5" width="9" height="9" class="yelp-svg-stroke" stroke-width="1" fill="none"></rect><rect x="0" y="5" width="5" height="5" class="yelp-svg-fill"></rect></svg><svg width="10" height="10" class="figure-zoom-out"><rect x="0.5" y="0.5" width="9" height="9" class="yelp-svg-stroke" stroke-width="1" fill="none"></rect><polygon points="0,0 10,0 10,10 5,10 5,5 10,5 0,5" class="yelp-svg-fill"></polygon></svg></a><div class="title title-figure"><h3><span class="title">Quick Add Entry</span></h3></div>
+<div class="region">
+<div class="contents"><div class="media media-image"><div class="inner"><img src="figures/quick_tag_entry.png" class="media media-block" alt=""></div></div></div>
+<div class="desc"> </div>
+</div>
+</div></div>
+</div></div>
+</div></section><section id="quick-add-dates"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title"><span class="title">Adding Dates and Tags to Tasks Using the Quick Add Entry</span></h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="p">You can also create a task in the <span class="gui">Quick Add Entry</span> and at the same time specify its tags, start date, and due date. Follow the below syntax to add these options:</p>
+<div class="terms"><div class="inner"><div class="region"><dl class="terms">
+<dt class="terms"><span class="em-bold em">tags:tag1,tag2,tag3</span></dt>
+<dd class="terms"><p class="p">When using "tags:", you can apply as many tags as you want using a comma as a separator (do not put a space between any of those tags). You can also use individual "@" tags, even in combination with the tags, if you want to have the tag as part of the task title.</p></dd>
+<dt class="terms">
+<span class="em-bold em">due:<span class="code">date</span></span> or <span class="em-bold em">start:<span class="code">date</span></span>
+</dt>
+<dd class="terms"><p class="p">Use <span class="app">GTG's</span> natural date parsing syntax to assign a start and due date in a variety of formats. See <span class="link"><a href="gtg-date-parsing" title="gtg-date-parsing">Using the Date and Keyword Parsing Syntax</a></span> for more information.</p></dd>
+</dl></div></div></div>
+</div></div>
+</div></section><section id="quickadd-examples"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title"><span class="title">Quick Add Entry Examples</span></h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="p">The following examples show the result of adding this syntax to the <span class="gui">Quick Add Entry</span> field.</p>
+<div class="terms"><div class="inner"><div class="region"><dl class="terms">
+<dt class="terms"><span class="em-bold em"><span class="code">return book</span></span></dt>
+<dd class="terms"><p class="p">Creates a new task with the title <span class="em">return book</span>. No tags, start date, or due date are added.</p></dd>
+<dt class="terms"><span class="em-bold em"><span class="code">buy groceries tags:purchases,personal</span></span></dt>
+<dd class="terms"><p class="p">Creates a new task with the title <span class="em">buy groceries</span> and with the tags <span class="em">purchases</span> and <span class="em">personal</span>. No start date or due date are added.</p></dd>
+<dt class="terms"><span class="em-bold em"><span class="code">write a book start:someday</span></span></dt>
+<dd class="terms"><p class="p">Creates a new task with the title <span class="em">write a book</span> and with the start date of <span class="em">someday</span>. No tags or due date are added.</p></dd>
+<dt class="terms"><span class="em-bold em"><span class="code">buy stationary for the @office tags:purchases,errands start:tuesday due:20200330</span></span></dt>
+<dd class="terms"><p class="p">Creates a new task with the title <span class="em">buy stationary for the @office</span>, with the tags <span class="em">office</span>, <span class="em">purchases</span> and <span class="em">errands</span>, with the due date <span class="em">March 30, 2020</span>, and a start date of <span class="em">next Tuesday</span>.</p></dd>
+<dt class="terms"><span class="em-bold em"><span class="code">call mum about the broken @phone tags:family due:sunday start:tomorrow</span></span></dt>
+<dd class="terms"><p class="p">Creates a new task with the title <span class="em">call mum about the broken @phone</span>, with the tags <span class="em">family</span> and <span class="em">phone</span>, with the due date of <span class="em">next Sunday</span>, and the start date <span class="em">tomorrow</span>.</p></dd>
+</dl></div></div></div>
+</div></div>
+</div></section><section class="links" role="navigation"><div class="inner">
+<div class="hgroup pagewide"></div>
+<div class="contents pagewide"><div class="links guidelinks"><div class="inner">
+<div class="title"><h2><span class="title">More Information</span></h2></div>
+<div class="region"><ul><li class="links "><a href="index.html#gtg-task-management" title="Filtering and Organizing Tasks">Filtering and Organizing Tasks</a></li></ul></div>
+</div></div></div>
+</div></section>
+</div>
+<div class="clear"></div></article><footer><div class="inner pagewide"><footer class="about ui-expander" role="contentinfo"><div class="yelp-data yelp-data-ui-expander" data-yelp-expanded="false"></div>
+<div class="inner">
+<div class="hgroup"><h2><span class="title">About</span></h2></div>
+<div class="region"><div class="contents">
+<div class="copyrights">
+<div class="copyright">© 2013 Radina Matic</div>
+<div class="copyright">© 2020 Danielle Vansia</div>
+</div>
+<div class="credits">
+<div class="credits-authors">
+<div class="title"><span class="title">Written By</span></div>
+<ul class="credits"><li>Radina Matic</li></ul>
+</div>
+<div class="credits-editors">
+<div class="title"><span class="title">Edited By</span></div>
+<ul class="credits"><li>Danielle Vansia</li></ul>
+</div>
+<div class="credits-blank"></div>
+<div class="credits-blank"></div>
+</div>
+<div class="license">
+<div class="title"><span class="title">Creative Commons</span></div>
+<div class="contents"><p class="p">This work is licensed under a <span class="link"><a href="http://creativecommons.org/licenses/by-sa/3.0/" title="http://creativecommons.org/licenses/by-sa/3.0/">Creative
+  Commons Attribution-ShareAlike 3.0 Unported License</a></span>.</p></div>
+</div>
+</div></div>
+</div></footer></div></footer>
+</div></main></body>
+</html>
